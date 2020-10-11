@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">QuizDesafio</string>
+    <string name="answer_true">VERDADEIRO</string>
+    <string name="answer_false">FALSO</string>
+</resources>
