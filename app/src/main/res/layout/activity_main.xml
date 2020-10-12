@@ -23,14 +23,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/text_question"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/text_questions"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
                 android:layout_marginTop="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/app_name"
-                android:textSize="24sp"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:textAlignment="viewStart"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -42,8 +43,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginBottom="10dp"
+                android:clickable="true"
                 android:text="@string/answer_true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -54,8 +56,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="10dp"
+                android:clickable="true"
                 android:text="@string/answer_false"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/text_true" />

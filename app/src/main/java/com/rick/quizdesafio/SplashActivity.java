@@ -53,9 +53,10 @@ public class SplashActivity extends AppCompatActivity {
             // Alterar o valor do boolean com chave FIRST_TIME_SPLASH para false, para que na proxima vez não entre nessa condição.
             editor.putBoolean(keyFirstLogin, false);
             editor.commit();
-            return 5000;
+            final int i = 1000;
+            return i;
         }
         // Retorna esse valor quando firstTime retornar false, porque náo é a primeira vez que esta logando ou abrindo o aplicativo
-        return 1000;
+        return 0;
     }
 }
