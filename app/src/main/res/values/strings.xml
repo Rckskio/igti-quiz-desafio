@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">QuizDesafio</string>
+    <string name="app_name">Quiz Desafio</string>
     <string name="answer_true">VERDADEIRO</string>
     <string name="answer_false">FALSO</string>
     <string name="btn_restart_text">Reiniciar</string>
