@@ -1,10 +1,17 @@
 package com.rick.quizdesafio;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,14 +63,18 @@ public class MainActivity extends AppCompatActivity {
         verdadeiro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                verdadeiro.setBackground(getApplicationContext().getResources().getDrawable(R.drawable.rounded_blue));
                 responder(verdadeiro.getText().toString());
+                delay(verdadeiro);
             }
         });
 
         falso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                falso.setBackground(getApplicationContext().getResources().getDrawable(R.drawable.rounded_red));
                 responder(falso.getText().toString());
+                delay(falso);
             }
         });
     }
@@ -112,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public void readFile(Charset encoding) throws IOException {
+    private void readFile(Charset encoding) throws IOException {
         String[] leitura;
         StringBuilder sb = new StringBuilder();
         InputStream fileStream = getAssets().open(fileName);
@@ -125,5 +136,14 @@ public class MainActivity extends AppCompatActivity {
             perguntas.add(leitura[0]);
             respostas.add(leitura[1]);
         }
+    }
+
+    private void delay(final TextView textView) {
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                textView.setBackground(getApplicationContext().getResources().getDrawable(R.drawable.rounded_corner));
+            }
+        }, 250);
     }
 }
